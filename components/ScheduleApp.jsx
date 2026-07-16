@@ -1,3 +1,5 @@
+ "use client";
+
 import React, { useState, useMemo } from "react";
 import {
   ChevronLeft,
@@ -482,7 +484,7 @@ function PlantingScreen({ cropId, onBack }) {
    ルート
    ============================================================ */
 
-export default function App() {
+export default function ScheduleApp() {
   const [year, setYear] = useState(2026);
   const [screen, setScreen] = useState({ name: "gantt" });
 
