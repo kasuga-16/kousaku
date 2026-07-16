@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useMemo } from "react";
 import {
   ChevronLeft,
@@ -240,7 +238,7 @@ function GanttScreen({ year, setYear, onOpenTask, onOpenPlanting }) {
       <div className="flex-1 overflow-x-auto overflow-y-hidden px-2 pb-4">
         <div
           className="rounded-xl border border-[#DCD5C4] bg-white shadow-sm"
-          style={{ display: "grid", gridTemplateColumns: `128px repeat(12, minmax(112px, auto))`, width: "max-content" }}
+          style={{ display: "grid", gridTemplateColumns: `160px repeat(12, minmax(92px, auto))`, width: "max-content" }}
         >
           {/* 月ヘッダー */}
           <div className="sticky left-0 top-0 z-30 border-b border-r border-[#DCD5C4] bg-[#EFEBDC] px-3 py-2 text-[12px] font-semibold text-[#5B5142]">
@@ -269,7 +267,7 @@ function GanttScreen({ year, setYear, onOpenTask, onOpenPlanting }) {
                 >
                   <CropIcon cropId={crop.id} color={crop.accent} />
                 </span>
-                <span className="truncate text-[13px] font-semibold text-[#26302B]">{crop.name}</span>
+                <span className="text-[13px] font-semibold text-[#26302B]">{crop.name}</span>
               </button>
 
               {/* 背景セル（月グリッド線） */}
@@ -484,7 +482,7 @@ function PlantingScreen({ cropId, onBack }) {
    ルート
    ============================================================ */
 
-export default function ScheduleApp() {
+export default function App() {
   const [year, setYear] = useState(2026);
   const [screen, setScreen] = useState({ name: "gantt" });
 
